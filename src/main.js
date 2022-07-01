@@ -3,4 +3,11 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 
-createApp(App).use(store).use(router).mount("#app");
+import vSelect from "vue-select";
+
+import "./assets/main.scss";
+import "vue-select/dist/vue-select.css";
+
+const app = createApp(App);
+app.component("v-select", vSelect);
+app.use(store).use(router).mount("#app");
