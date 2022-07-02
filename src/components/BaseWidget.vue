@@ -79,7 +79,7 @@ export default defineComponent({
           list.value = data;
         });
       } catch (error) {
-        return;
+        return error;
       }
     }
     return {
